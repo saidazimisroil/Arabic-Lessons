@@ -1,0 +1,45 @@
+<%- include('partials/header'); -%>
+
+<ul class="products" id="productList">
+    <% products.forEach(product => { %>
+    <li class="product">
+        <img src="<%= product.image %>" alt="<%= product.title %>" />
+        <h4><%= product.title %></h4>
+        <p><%= product.price %>$</p>
+    </li>
+    <% }); %>
+</ul>
+
+<script>
+    // Fetch data from the API endpoint
+    fetch("/products")
+        .then((response) => response.json())
+        .then((data) => {
+            const productList = document.getElementById("productList");
+
+            // Iterate through the data and create list items
+            data.forEach((product) => {
+                const li = document.createElement("li");
+                li.className = "product";
+
+                const img = document.createElement("img");
+                img.src = product.image; // Use the correct property from your product data
+                img.alt = product.title;
+
+                const h4 = document.createElement("h4");
+                h4.textContent = product.title;
+
+                const p = document.createElement("p");
+                p.textContent = product.price + "$"; // Replace with your MongoDB schema field for the price
+
+                // Append elements to the list item
+                li.appendChild(img);
+                li.appendChild(h4);
+                li.appendChild(p);
+
+                // Append the list item to the product list
+                productList.appendChild(li);
+            });
+        })
+        .catch((error) => console.error("Error fetching data:", error));
+</script>

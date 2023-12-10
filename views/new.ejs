@@ -1,0 +1,50 @@
+<%- include('partials/header'); -%>
+
+<form>
+    <h2>New Product</h2>
+    <label for="title">Title</label>
+    <input type="text" name="title" required />
+    <div class="title error"></div>
+    <label for="price">Price</label>
+    <input type="text" name="price" required />
+    <div class="price error"></div>
+    <button>Add Product</button>
+</form>
+
+<script>
+    const form = document.querySelector("form");
+    const titleError = document.querySelector(".title.error");
+    const priceError = document.querySelector(".price.error");
+
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        // reset errors
+        titleError.textContent = "";
+        priceError.textContent = "";
+
+        // get values
+        const title = form.title.value;
+        const price = form.price.value;
+
+        try {
+            const res = await fetch("/newproduct", {
+                method: "POST",
+                body: JSON.stringify({ title, price }),
+                headers: { "Content-Type": "application/json" },
+            });
+            // handle errors in frontend
+            const data = await res.json();
+            console.log(data.errors);
+            if (data.errors) {
+                titleError.textContent = data.errors.title;
+                priceError.textContent = data.errors.price;
+            }
+            if (!data.errors) {
+                location.assign("/products");
+            }
+        } catch (err) {
+            console.log(err);
+        }
+    });
+</script>
