@@ -5,6 +5,8 @@ const cookieParser = require("cookie-parser");
 const { requireAuth, checkUser } = require("./middlewares/auth");
 const upload = require("./middlewares/upload");
 const path = require("path"); // Import the 'path' module
+const helmet = require("helmet");
+const compression = require("compression");
 
 const app = express();
 
@@ -31,6 +33,10 @@ mongoose
     })
     .then((result) => app.listen(3000))
     .catch((err) => console.log(err));
+
+// production
+app.use(helmet());
+app.use(compression());
 
 // routes
 app.get("*", checkUser);
