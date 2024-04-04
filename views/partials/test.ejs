@@ -1,0 +1,24 @@
+<div class="mt-3 row justify-content-center">
+  <div class="col-sm-8">
+    <% for(let i = 0; i < count; i++) { %>
+    <div class="row mb-3 align-items-center">
+      <label for="savol<%= i+1 %>" class="col-sm-5 col-form-label text-center"
+        ><%= i+1 %>-savol</label
+      >
+      <div class="col-sm-7">
+        <select
+          class="form-select"
+          aria-label="Default select example"
+          name="savol<%= i+1 %>"
+          id="savol<%= i+1 %>">
+          <option selected><%= i+1 %>-savolning javobini tanlang</option>
+          <option value="A">A</option>
+          <option value="B">B</option>
+          <option value="T">T</option>
+          <option value="S">S</option>
+        </select>
+      </div>
+    </div>
+    <% } %>
+  </div>
+</div>
