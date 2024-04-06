@@ -61,6 +61,20 @@ module.exports.dars33_get = (req, res) => {
 module.exports.dars3_1_get = (req, res) => {
   res.render("dars3_1");
 };
+// 3.II
+module.exports.dars3_2_get = (req, res) => {
+  res.render("dars3_2");
+};
+
+// 3.III
+module.exports.dars3_3_get = (req, res) => {
+  res.render("dars3_3");
+};
+
+// 3.IV
+module.exports.dars3_4_get = (req, res) => {
+  res.render("dars3_4");
+};
 
 // TODO: dars4 Routes
 module.exports.dars4_get = (req, res) => {
