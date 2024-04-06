@@ -1,10 +1,12 @@
 <%- include('partials/header'); -%>
 
-<div class="px-4 py-5 my-5 text-center">
-  <img src="dars2_4.png" alt="dars2_4" class="img-fluid" />
-</div>
+<form action="/dars2-4" method="post">
+  <div class="px-4 py-5 my-5 text-center">
+    <img src="dars2_4.png" alt="dars2_4" class="img-fluid" />
+  </div>
 
-<%- include('partials/nextBtn', {nextRoute: 'dars3'}); -%>
+  <%- include('partials/finish'); -%>
+</form>
 
 <!-- prev -->
 <%- include('partials/previousBtn', {previousRoute: 'dars2-3'}); -%>

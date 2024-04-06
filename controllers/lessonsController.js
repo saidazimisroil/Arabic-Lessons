@@ -1,3 +1,8 @@
+// TODO: All Lessons GET
+module.exports.allLessons_get = (req, res) => {
+  res.render("allLessons");
+};
+
 // TODO: dars1 Routes
 module.exports.dars1_get = (req, res) => {
   res.render("dars1");
@@ -13,7 +18,7 @@ module.exports.dars1_3_get = (req, res) => {
   res.render("dars1_3");
 };
 module.exports.dars1_3_post = (req, res) => {
-  res.redirect("/dars2");
+  res.redirect("/barcha-darslar");
 };
 
 // TODO: dars2 Routes
@@ -39,7 +44,7 @@ module.exports.dars2_4_get = (req, res) => {
   res.render("dars2_4");
 };
 module.exports.dars2_4_post = (req, res) => {
-  res.redirect("/dars3");
+  res.redirect("/barcha-darslar");
 };
 
 // TODO: dars3 Routes

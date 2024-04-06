@@ -25,14 +25,9 @@
             <% if(user) { %>
             <span class="fs-6 mr-3 mt-2">welcome, <%= user.email %></span>
             <li><a href="/logout" class="btn btn-outline-danger">Log out</a></li>
-
-            <li><a href="/newproduct" class="btn btn-outline-success">New product</a></li>
             <% } else { %>
-            <li class="nav-item">
-              <a href="/login" class="nav-link active" aria-current="page">Log in</a>
-            </li>
+            <li><a href="/login" class="btn btn-primary">Log in</a></li>
             <li><a href="/signup" class="btn btn-success">Sign up</a></li>
-
             <% } %>
           </ul>
         </header>

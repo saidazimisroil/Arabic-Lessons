@@ -3,6 +3,9 @@ const lessonsController = require("../controllers/lessonsController");
 
 const router = Router();
 
+// TODO: All lessons Route
+router.get("/barcha-darslar", lessonsController.allLessons_get);
+
 // TODO: dars 1
 router.get("/dars1", lessonsController.dars1_get);
 
