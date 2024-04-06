@@ -34,4 +34,13 @@ router.get("/dars33", lessonsController.dars33_get);
 
 router.get("/dars3_1", lessonsController.dars3_1_get);
 
+// TODO: dars 4
+router.get("/dars4", lessonsController.dars4_get);
+
+// TODO: dars 5
+router.get("/dars5", lessonsController.dars5_get);
+
+// TODO: dars 6
+router.get("/dars6", lessonsController.dars6_get);
+
 module.exports = router;
