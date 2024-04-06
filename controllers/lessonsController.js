@@ -51,3 +51,13 @@ module.exports.dars2_4_post = (req, res) => {
 module.exports.dars3_get = (req, res) => {
   res.render("dars3");
 };
+module.exports.dars32_get = (req, res) => {
+  res.render("dars32");
+};
+module.exports.dars33_get = (req, res) => {
+  res.render("dars33");
+};
+// 3.I
+module.exports.dars3_1_get = (req, res) => {
+  res.render("dars3_1");
+};

@@ -29,5 +29,9 @@ router.post("/dars2-4", lessonsController.dars2_4_post);
 
 // TODO: dars 3
 router.get("/dars3", lessonsController.dars3_get);
+router.get("/dars32", lessonsController.dars32_get);
+router.get("/dars33", lessonsController.dars33_get);
+
+router.get("/dars3_1", lessonsController.dars3_1_get);
 
 module.exports = router;
