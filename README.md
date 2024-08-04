@@ -1,3 +1,2 @@
-# smoothies
-deployment link: https://smoothies.onrender.com/
+# Arabic Lessons Web site
 project name: Arabic Lessons
