@@ -22,9 +22,15 @@
           </a>
 
           <ul class="nav nav-pills">
+            <!-- Another users -->
             <% if(user) { %>
             <span class="fs-6 mr-3 mt-2">welcome, <%= user.email %></span>
+            <!-- ADMIN -->
+            <% if (user.email == 'admin@admin.com') { %>
+            <li><a href="/natijalar" class="btn btn-success">Natijalar</a></li>
+            <% } %>
             <li><a href="/logout" class="btn btn-outline-danger">Log out</a></li>
+
             <% } else { %>
             <li><a href="/login" class="btn btn-primary">Log in</a></li>
             <li><a href="/signup" class="btn btn-success">Sign up</a></li>
